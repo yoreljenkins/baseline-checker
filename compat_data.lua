@@ -92,6 +92,72 @@ M.css_compatibility = {
     status = 'supported',
     description = 'The aspect-ratio CSS property sets a preferred aspect ratio for the box.'
   },
+  ['margin-top'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The margin-top CSS property sets the top margin of an element.'
+  },
+  ['margin-bottom'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The margin-bottom CSS property sets the bottom margin of an element.'
+  },
+  ['margin-left'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The margin-left CSS property sets the left margin of an element.'
+  },
+  ['margin-right'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The margin-right CSS property sets the right margin of an element.'
+  },
+  ['justify-content'] = {
+    baseline = true,
+    support = {
+      chrome = '29',
+      firefox = '28',
+      safari = '9',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The justify-content CSS property defines how the browser distributes space between and around content items along the main-axis of a flex container.'
+  },
+  ['align-items'] = {
+    baseline = true,
+    support = {
+      chrome = '29',
+      firefox = '28',
+      safari = '9',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The align-items CSS property sets the align-self value on all direct children as a group.'
+  },
   ['backdrop-filter'] = {
     baseline = false,
     support = {
@@ -245,6 +311,50 @@ M.css_compatibility = {
     },
     status = 'supported',
     description = 'The height CSS property specifies the height of an element.'
+  },
+  ['min-height'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The min-height CSS property sets the minimum height of an element.'
+  },
+  ['max-height'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The max-height CSS property sets the maximum height of an element.'
+  },
+  ['min-width'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The min-width CSS property sets the minimum width of an element.'
+  },
+  ['max-width'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The max-width CSS property sets the maximum width of an element.'
   },
   ['font-size'] = {
     baseline = true,
