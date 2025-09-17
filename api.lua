@@ -101,7 +101,7 @@ function M.fetch_feature_by_id(feature_id)
         break
       end
     end
-    
+
     local mock_response = {
       features = {
         {
