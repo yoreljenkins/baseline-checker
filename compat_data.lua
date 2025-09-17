@@ -356,6 +356,94 @@ M.css_compatibility = {
     status = 'supported',
     description = 'The max-width CSS property sets the maximum width of an element.'
   },
+  ['flex-direction'] = {
+    baseline = true,
+    support = {
+      chrome = '29',
+      firefox = '28',
+      safari = '9',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The flex-direction CSS property specifies how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).'
+  },
+  ['padding-top'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The padding-top CSS property sets the top padding of an element.'
+  },
+  ['padding-bottom'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The padding-bottom CSS property sets the bottom padding of an element.'
+  },
+  ['padding-left'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The padding-left CSS property sets the left padding of an element.'
+  },
+  ['padding-right'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The padding-right CSS property sets the right padding of an element.'
+  },
+  ['align-self'] = {
+    baseline = true,
+    support = {
+      chrome = '29',
+      firefox = '28',
+      safari = '9',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The align-self CSS property sets the align-self value on the element, overriding the align-items value of the parent.'
+  },
+  ['border'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The border CSS shorthand property sets an element\'s border.'
+  },
+  ['font-weight'] = {
+    baseline = true,
+    support = {
+      chrome = '1',
+      firefox = '1',
+      safari = '1',
+      edge = '12'
+    },
+    status = 'supported',
+    description = 'The font-weight CSS property sets the weight (or boldness) of the font.'
+  },
   ['font-size'] = {
     baseline = true,
     support = {
