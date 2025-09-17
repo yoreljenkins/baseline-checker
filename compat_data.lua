@@ -305,7 +305,7 @@ function M.update_from_api()
   for _, feature in ipairs(common_features) do
     local feature_data = api.fetch_feature_by_id(feature)
     if feature_data and feature_data.features and #feature_data.features > 0 then
-      local single_feature = feature_data.features[1] -- Get the first feature from the response
+      local single_feature = feature_data.features[1]
       local compat_data = api.convert_webstatus_feature_to_compat_data(single_feature)
       if compat_data then
         M.update_property(feature, compat_data)

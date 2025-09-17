@@ -44,9 +44,7 @@ local function make_http_request(url)
     return nil, "Failed to execute curl command"
   end
 
-  print("Running curl:", cmd)
   local result = handle:read("*a")
-  print("Raw result:", result)
   local ok, reason, code = handle:close()
 
   if not ok then
@@ -265,7 +263,6 @@ function M.fetch_features_by_baseline_status(status)
       return mock_response
     end
 
-    -- Collect entries
     if response and response.data then
       for _, entry in ipairs(response.data) do
         table.insert(features, entry)
@@ -285,7 +282,6 @@ function M.fetch_features_by_baseline_status(status)
 end
 
 function M.fetch_all_baseline_features()
-  print('Fetching all baseline features from web.dev API...')
   local all_features = {}
   local statuses = {'widely', 'limited', 'newly'}
 
