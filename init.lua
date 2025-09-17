@@ -8,7 +8,7 @@ local api = require('baseline-checker.api')
 local M = {}
 
 M.config = {
-  auto_lint = true,
+  auto_lint = false,
   show_virtual_text = true,
   update_on_startup = false,
   keymaps = {
@@ -189,8 +189,12 @@ function M.list_properties()
   for _, prop in ipairs(properties) do
 
     local info = compat_data.get_property_info(prop)
-    local status_icon = info.baseline and '✓' or '⚠'
-    local category = info.baseline_category or 'local'
+    if not info then
+      info = { status = 'unknown', baseline = false, baseline_category = 'local' }
+    end
+
+    local status_icon = info ~= nil and info.baseline and '✓' or '⚠'
+    local category = info ~= nil and info.baseline_category or 'local'
     table.insert(lines, string.format('  %s %s (%s - %s)', status_icon, prop, info.status, category))
   end
 
@@ -224,7 +228,7 @@ end
 function M.setup_commands()
   vim.api.nvim_create_user_command('CheckBaseline', function(opts)
     M.check_baseline(opts.args)
-  end, { 
+  end, {
     nargs = '?',
     desc = 'Check browser compatibility for CSS property',
     complete = function()

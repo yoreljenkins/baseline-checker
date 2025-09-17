@@ -139,10 +139,10 @@ function M.toggle()
 
   if M.config.enabled then
     M.lint_buffer()
-    print('Baseline checker enabled')
+    print('Baseline LSP checker enabled')
   else
     M.clear_buffer()
-    print('Baseline checker disabled')
+    print('Baseline LSP checker disabled')
   end
 end
 
@@ -151,7 +151,7 @@ function M.setup_autocmds()
 
   vim.api.nvim_create_autocmd({ 'BufEnter', 'TextChanged', 'TextChangedI' }, {
     group = 'BaselineChecker',
-    pattern = { '*.css', '*.scss', '*.less' },
+    pattern = { '*.css', '*.scss', '*.less', '*.sass', '*.styl' },
     callback = function(args)
       vim.defer_fn(function()
         M.lint_buffer(args.buf)
