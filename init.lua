@@ -46,7 +46,7 @@ function M.check_baseline(property)
   if not info then
     local feature_data = api.fetch_feature_by_id(property)
     if feature_data and feature_data.features and #feature_data.features > 0 then
-      local feature = feature_data.features[1] 
+      local feature = feature_data.features[1]
       info = api.convert_webstatus_feature_to_compat_data(feature)
       if info then
         compat_data.update_property(property, info)

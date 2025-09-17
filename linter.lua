@@ -60,7 +60,7 @@ local function get_highlight_group(status)
   return M.config.highlight_groups[status] or M.config.highlight_groups.unknown
 end
 
-local function format_virtual_text(property, info)
+local function format_virtual_text(_, info)
   if not info then
     return string.format('%sUnknown property', M.config.virtual_text_prefix)
   end
@@ -114,7 +114,7 @@ function M.lint_buffer(bufnr)
     bufnr = vim.api.nvim_get_current_buf()
   end
 
-  local filetype = vim.api.nvim_buf_get_option(bufnr, 'filetype')
+local filetype = vim.bo[bufnr].filetype
   if filetype ~= 'css' and filetype ~= 'scss' and filetype ~= 'less' then
     return
   end
