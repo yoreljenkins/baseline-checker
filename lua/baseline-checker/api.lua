@@ -308,8 +308,9 @@ function M.save_features_to_json(features_data)
   local baseline_data_dir = nvim_data_path .. '/baseline-checker/'
   local json_file = baseline_data_dir .. 'features_data.json'
 
-  local json_string = vim.fn.json_encode(features_data)
+  vim.fn.mkdir(baseline_data_dir, 'p')
 
+  local json_string = vim.fn.json_encode(features_data)
   local file = io.open(json_file, 'w')
   if file then
     file:write(json_string)
