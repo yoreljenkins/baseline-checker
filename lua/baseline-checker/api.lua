@@ -304,9 +304,9 @@ function M.fetch_all_baseline_features()
 end
 
 function M.save_features_to_json(features_data)
-  local nvim_config_path = vim.fn.stdpath('config')
-  local baseline_data_dir = nvim_config_path .. '/lua/baseline-checker'
-  local json_file = baseline_data_dir .. '/features_data.json'
+  local nvim_data_path = vim.fn.stdpath('data')
+  local baseline_data_dir = nvim_data_path .. '/baseline-checker/'
+  local json_file = baseline_data_dir .. 'features_data.json'
 
   local json_string = vim.fn.json_encode(features_data)
 
@@ -323,8 +323,8 @@ function M.save_features_to_json(features_data)
 end
 
 function M.load_features_from_json()
-  local nvim_config_path = vim.fn.stdpath('config')
-  local json_file = nvim_config_path .. '/lua/baseline-checker/features_data.json'
+  local nvim_config_path = vim.fn.stdpath('data')
+  local json_file = nvim_config_path .. '/baseline-checker/features_data.json'
 
   local file = io.open(json_file, 'r')
   if not file then
