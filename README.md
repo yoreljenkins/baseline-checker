@@ -57,15 +57,6 @@ The plugin automatically lints CSS files (`.css`, `.scss`, `.less`) and shows vi
 - **Experimental (⚠)**: Experimental features with minimal support
 - **Unknown (?)**: Properties not in the compatibility database
 
-## API Integration
-
-The plugin now integrates with web.dev's baseline API using ALL baseline status endpoints:
-
-- **Widely Available**: `https://api.webstatus.dev/v1/features?q=baseline_status:widely` - Stable, widely supported features
-- **Newly Available**: `https://api.webstatus.dev/v1/features?q=baseline_status:newly` - Recently baseline features  
-- **Limited Availability**: `https://api.webstatus.dev/v1/features?q=baseline_status:limited` - Features with limited support
-- **Feature by ID**: `https://api.webstatus.dev/v1/features?q=id:{feature}` - Gets specific feature data
-
 ### Data Management
 
 - **Local JSON Storage**: All fetched features are saved to `features_data.json` for offline use
@@ -97,7 +88,7 @@ require('baseline-checker').setup({
 
 ## Supported Properties
 
-The plugin includes compatibility data for common CSS features and can fetch additional data via API:
+The plugin includes compatibility data for common CSS features so you can add your own locally and can fetch additional data via API:
 
 - `grid` / `grid-template-columns` (Baseline - widely supported)
 - `flex` / `flexbox` (Baseline - widely supported)
@@ -139,10 +130,3 @@ The API module provides:
 - Caching with TTL (1 hour default)
 - Fallback to local data when API is unavailable
 - Automatic data conversion from web.dev format
-
-## Contributing
-
-1. Modify the compatibility data in `compat_data.lua`
-2. Extend the linting patterns in `linter.lua`
-3. Add new commands in `init.lua`
-4. Enhance API integration in `api.lua`
